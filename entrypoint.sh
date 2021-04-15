@@ -43,6 +43,11 @@ validate "JAVA_VENDOR"
 validate "JAVA_VERSION"
 validate "BUILD_TOOL"
 
+if [ ${BUILD_TOOL} == "gradlew" ]
+then
+    BUILD_TOOL="./${BUILD_TOOL}"
+fi
+
 COMMAND="${BUILD_TOOL} ${BUILD_COMMAND} ${TEST_COMMAND}"
 echo ${COMMAND}
 
