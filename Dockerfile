@@ -1,6 +1,7 @@
 # Container image that runs your code
 FROM docker.unidata.ucar.edu/thredds-test-environment:latest
 USER root
+ENV GITHUB_ACTIONS="YEP"
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
