@@ -16,7 +16,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'ghcr.io/unidata/thredds-test-action:v2'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.java-vendor}}
     - ${{ inputs.java-version }}
