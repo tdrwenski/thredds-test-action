@@ -14,6 +14,9 @@ inputs:
   test-command:
     description: 'command used in conjunction with the build tool to run the tests'
     required: true
+  optional-argument:
+    description: 'Optional argument to be passed to docker run command'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -22,4 +25,5 @@ runs:
     - ${{ inputs.java-version }}
     - ${{ inputs.build-tool }}
     - ${{ inputs.test-command }}
+    - ${{ inputs.optional-argument }}
 
